@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Restaurants</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+
+    <h1>All Restaurants</h1>
+
+    <% for(oneRestaurant of restaurants){ %>
+        <a href="/restaurants/<%= oneRestaurant.id %>"><%= oneRestaurant.name %>   <% if(oneRestaurant.isOpen === false){ %>- Closed<% } %></a>
+        
+ 
+        <br>
+    <% } %>
+</body>
+</html>
